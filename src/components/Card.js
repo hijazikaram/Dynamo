@@ -5,7 +5,7 @@ const Card = (props) => {
     return (
         <div className="row" >
             {props.cards.map((card, key) => (
-                <div className="col-2 card" style={{ color: card.color }} key={key}>
+                <div className="col-2 card" style={{ color: card.color, backgroundColor: 'lightgrey' }} key={key}>
                     <div style={{ marginRight: '100%' }}>{card.suit}</div>
                     <div className="card-body" >
                         <h3 style={{ margin: 'auto' }}>{card.value} </h3>
