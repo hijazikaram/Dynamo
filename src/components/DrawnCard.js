@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const DrawnCard = (props) => {
     return (
-        <div>
+        <div style={{ marginTop: '3em' }}>
             {props.cards.length > 0 ?
                 <div>
                     <h3>Drewed</h3>

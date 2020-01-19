@@ -8,7 +8,7 @@ class Deck extends React.Component {
     state = {
         cards: createDeckOfCards()
     }
-    
+
     render() {
         return (
             <div>
@@ -21,10 +21,8 @@ class Deck extends React.Component {
                     <div>
                         <button className="btn" onClick={() => this.setState({ cards: shuffleDeckOfcards() })}>Shuffle the deck</button>
                         <button className="btn" onClick={() => { this.setState({ cards: drawFromTheDeck() }) }}>Draw a new card</button>
-                        <br /><br />
                     </div>
                 }
-                <hr />
                 <DrawnCard drawnCard={getPoppedCard()} cards={this.state.cards} />
                 <h1><Card cards={this.state.cards} /></h1>
             </div>
