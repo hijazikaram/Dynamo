@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const DrawnCard = (props) => {
     return (
@@ -6,7 +7,7 @@ const DrawnCard = (props) => {
             {props.cards.length > 0 ?
                 <div>
                     <h3>Drewed</h3>
-                    <h3 style={props.drawnCard.suit === '♥' || props.drawnCard.suit === '♦' ? { color: 'red' } : { color: 'black' }}>{props.drawnCard.value} {props.drawnCard.suit}</h3>
+                    <h3 style={{ color: props.drawnCard.color }}>{props.drawnCard.value} {props.drawnCard.suit}</h3>
                 </div>
                 :
                 <h5>Please click Restart to draw a new card.</h5>
@@ -15,4 +16,11 @@ const DrawnCard = (props) => {
     );
 }
 
+DrawnCard.propTypes = {
+    drawnCard: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ]),
+    cards: PropTypes.array
+};
 export default DrawnCard;

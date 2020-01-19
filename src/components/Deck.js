@@ -20,15 +20,12 @@ class Deck extends React.Component {
                         <h3>oh oh, no more cards</h3><br />
                         <button className="btn btn-success" onClick={() => this.setState({ cards: shuffleDeckOfcards() })}>Restart</button>
                     </div>
-
                     :
                     <div>
                         <button className="btn" onClick={() => this.setState({ cards: shuffleDeckOfcards() })}>Shuffle the deck</button>
                         <button className="btn" onClick={() => { this.setState({ cards: drawFromTheDeck() }) }}>Draw a new card</button>
                         <br /><br />
-
                     </div>
-
                 }
                 <hr />
                 <DrawnCard drawnCard={getPoppedCard()} cards={this.state.cards} />
