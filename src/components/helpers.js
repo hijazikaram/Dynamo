@@ -12,7 +12,6 @@ class Card {
         this.suit = suit;
         this.color = color;
     }
-
 }
 
 // Create the deck of cards

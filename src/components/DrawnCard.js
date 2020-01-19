@@ -23,4 +23,5 @@ DrawnCard.propTypes = {
     ]),
     cards: PropTypes.array
 };
+
 export default DrawnCard;

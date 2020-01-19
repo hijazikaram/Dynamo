@@ -5,13 +5,10 @@ import DrawnCard from './DrawnCard';
 
 class Deck extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            cards: createDeckOfCards()
-        }
+    state = {
+        cards: createDeckOfCards()
     }
+    
     render() {
         return (
             <div>
